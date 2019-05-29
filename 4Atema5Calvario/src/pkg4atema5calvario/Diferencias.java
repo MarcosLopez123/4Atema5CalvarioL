@@ -24,7 +24,7 @@ public class Diferencias {
 
         try{
             //obtenemos el valor de i
-            int i = Integer.parseInt(txtI.getText());
+        int i = Integer.parseInt(txtI.getText());
         Double x []= new Double[i];
         Double fx []= new Double[i];
         //llenamos los arreglos x y fx
