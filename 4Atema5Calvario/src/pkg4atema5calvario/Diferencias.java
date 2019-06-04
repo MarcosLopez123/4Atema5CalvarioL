@@ -21,9 +21,11 @@ import javax.swing.table.DefaultTableModel;
 public class Diferencias {
     
     public void Calcular(JTextField txtI,JTable Jt1, JTable Jt2){
-
+            // Se asigna un try catch, 
+            //por si ocurre algun error en la ejecucion 
         try{
-            //obtenemos el valor de i
+            
+            // Obtenemos el valor de i
         int i = Integer.parseInt(txtI.getText());
         Double x []= new Double[i];
         Double fx []= new Double[i];
@@ -34,7 +36,8 @@ public class Diferencias {
         for (int j = 0; j<i;j++){  
            fx[j]=Double.parseDouble(Jt1.getValueAt(j,1).toString());               
         }
-         //Primera diferencia
+        
+         // Primera diferencia
          double diferencia [] = new double[i];
          for (int j = 0; j<i;j++){
             
@@ -42,7 +45,8 @@ public class Diferencias {
             diferencia[1] = (fx[2] - fx[1])/ (x[2]-x[1]);
             diferencia[2] = (fx[3] - fx[2])/ (x[3]-x[2]);
           }
-        //pasamos el arreglo diferencia a un arreglo de tipo big decimal
+         
+        // pasamos el arreglo diferencia a un arreglo de tipo big decimal
         BigDecimal d1 [] = new BigDecimal[diferencia.length];
         for (int j = 0; j<i;j++){
             
